@@ -5,18 +5,15 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="src/css/styles.css">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 </head>
 
 <body>
 	<header class="header">
-		<a class="header__logo"></a>
-
-
-		<button class="header__btn">
-			<span class="header__btn-span"></span>
-			<span class="header__btn-span"></span>
-			<span class="header__btn-span"></span>
+	<div class="header-container">
+		<a class="header__logo"><img src="img/logo.png"></a>
+		<button id="nav-icon" type="button" class="header__btn" aria-expanded="false" aria-label="Open/close menu" title="Open/close menu">
 			<span class="header__btn-span"></span>
 		</button>
 		<ul class="header__menu">
@@ -27,9 +24,11 @@
 			<li class="header__menu-item">About</li>
 			<li class="header__menu-item">Contact</li>
 		</ul>
+		</div>
 	</header>
+	
 	<section class="home">
-		<div class="container">
+		<div class="container home-container">
 			<h1 class="home__title">Spring / Summer Collection</h1>
 			<p class="home__subtitle">up to 60% discount on new arrivals</p>
 			<p class="home__title">trending new items, from creators around the world</p>
@@ -38,37 +37,30 @@
 	</section>
 
 	<section class="products">
-		<div class="container">
+		<h2 class="section-title">Latest Products</h2>
+		<div class="container products-container">
 			<div class="img-small">
-				<div class="img-border">
-					<h3>men</h3>
+					<h3 class="img-small__title">men</h3>
 					<img src="img/products1.png">
-				</div>
 			</div>
 
-			<div class="img-small">
-				<div class="img-border">
-					<h3>woman</h3>
+			<div class="img-small">		
+					<h3 class="img-small__title">woman</h3>
 					<img src="img/products2.jpg">
-				</div>
 			</div>
 
 			<div class="img-small">
-				<div class="img-border">
-					<h3>watches</h3>
+					<h3 class="img-small__title">watches</h3>
 					<img src="img/products3.jpg">
-				</div>
 			</div>
 
 			<div class="img-large">
-				<h3>40% Off<br> New Autumn <br> Collection
-				</h3>
+				<h3 class="img-large__title">40% Off<br> New Autumn <br> Collection</h3>
 				<img src="img/products4.jpg">
 			</div>
 
 			<div class="img-large">
-				<h3>mega sale<br> on items from<br> spirit collection
-				</h3>
+				<h3 class="img-large__title">mega sale<br> on items from<br> spirit collection</h3>
 				<img src="img/products5.jpg">
 			</div>
 		</div>

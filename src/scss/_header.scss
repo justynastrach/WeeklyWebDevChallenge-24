@@ -1,0 +1,74 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	background-color: transparent;
+	color: #fff;	
+	z-index: 99;
+	
+	&__logo{
+		width: 20%;
+	}
+	&__btn{
+		display: block;
+		position: relative;
+		width: 60px;
+		height: 50px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		
+		&-span{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 5px;
+			background-color: $base-red;
+			border-radius: 10px;
+		}
+		&-span::before, &-span::after{
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: $base-red;
+			border-radius: 10px;
+			width: 100%;
+			height: 5px;
+			left: 0px;
+			top: -12px;
+		}
+
+		&-span:after{
+			top: 12px;
+		}
+
+	}
+
+	&__menu{
+		display: none;
+		background-color: red;
+		list-style: none;
+		
+		flex-direction: row;
+		width: 70%;
+	}
+		
+	&__menu-item{
+		flex: 1;
+	}
+
+}
+.header-container{
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+}
