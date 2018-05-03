@@ -1,0 +1,87 @@
+.items-container{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 20px;
+	width: 90%;
+	margin: 0 auto;
+	//background-color: red;
+}
+.items{
+	background: url(/img/trending_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #777777;
+	
+	&__img{
+		grid-column: 1/7;
+		width: 100%;
+		height: auto;
+		display: block;
+		background-color: yellow;
+	}
+	&__title{
+		grid-column: 1/7;
+		color: $base-red;
+		text-transform: uppercase;
+		font-size: 2.8em;
+		font-family: 'Lato', sans-serif;
+		font-weight: 800;
+		text-align: center;
+	}
+	&__subtitle{
+		grid-column: 1/7;
+		font-family: 'Open-Sans', sans-serif;
+		font-size: 1.8em;
+		color: #777777;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+	&__text{
+		grid-column: 1/7;
+		font-size: 1.7em;
+		font-family: 'Lato', sans-serif;
+		letter-spacing: 1px;
+	}
+	&__tip{
+		grid-column: 1/7;
+		font-size: 1.7em;
+		font-family: 'Lato', sans-serif;
+		letter-spacing: 1px;
+	}
+	&__tip h4{
+		text-transform: uppercase;
+	}
+
+	&__sizes{
+		grid-column: 1/7;
+		text-align: center;
+	}
+	
+	&__sizes legend{
+		font-size: 1.7em;
+		font-family: 'Lato', sans-serif;
+		letter-spacing: 1px;
+	}
+	&__sizes-choice{
+		width: 70px;
+		height: 50px;
+		display: inline-block;
+		border-radius: 0px;
+		background-color: red;
+		border: none;
+		background-color: transparent;
+	}
+	
+	&__sizes-btn{
+		width: 170px;
+		height: 50px;
+		font-size: 1.7em;
+		text-transform: uppercase;
+		border: 1px solid #000;
+		background-color: transparent;
+		cursor: pointer;
+		
+	}
+}
+
