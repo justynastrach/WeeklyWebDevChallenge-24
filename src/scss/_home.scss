@@ -21,7 +21,7 @@ section{
 	padding: 40px 0;
 }
 .container{
-	width: 90%;
+	width: 70%;
 	margin: 0 auto;
 	padding: 50px 0;
 }
@@ -50,6 +50,7 @@ section{
 		text-transform: uppercase;
 		font-weight: 900;
 		letter-spacing: 3px;
+		margin: 20px 0;
 	}
 	&__btn{
 		width: 200px;
@@ -61,16 +62,15 @@ section{
 		font-size: 1.7em;
 		font-weight: 700;
 		cursor: pointer;
-		margin-top: 10vh;
+		margin-top: 70px;
 	}
 }
 .home-container{
-	padding-top: 25vh;
+	padding-top: 150px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 60%;
 
 	
 }

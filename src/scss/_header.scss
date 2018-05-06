@@ -1,19 +1,20 @@
-body{
+body {
 	margin: 0;
 	padding: 0;
 }
-.header{
+
+.header {
 	position: fixed;
 	height: 80px;
 	width: 100%;
-	background-color: transparent;
-	color: #fff;	
+	color: #fff;
 	z-index: 99;
-	
-	&__logo{
+
+	&__logo {
 		width: 20%;
+		z-index: 3;
 	}
-	&__btn{
+	&__btn {
 		display: block;
 		position: relative;
 		width: 60px;
@@ -22,8 +23,9 @@ body{
 		background-color: transparent;
 		border: none;
 		cursor: pointer;
-		
-		&-span{
+		z-index: 3;
+
+		&-span {
 			display: block;
 			position: relative;
 			width: 100%;
@@ -31,7 +33,8 @@ body{
 			background-color: $base-red;
 			border-radius: 10px;
 		}
-		&-span::before, &-span::after{
+		&-span::before,
+		&-span::after {
 			content: "";
 			position: absolute;
 			display: block;
@@ -43,27 +46,70 @@ body{
 			top: -12px;
 		}
 
-		&-span:after{
+		&-span:after {
 			top: 12px;
 		}
 
 	}
 
-	&__menu{
-		display: none;
-		background-color: red;
-		list-style: none;
-		
-		flex-direction: row;
-		width: 70%;
+	&__menu {
+		background-color: #333333;
+		height: 70vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: transparent;
+	
+		&::before{
+			content: "";
+			position: absolute;
+			height: 115%;
+			width: 100%;
+			background-color: #222222;
+			opacity: 0.9;
+			z-index: 1;
+			top: -80px;
+		}
 	}
-		
-	&__menu-item{
-		flex: 1;
+	&__menu-link{
+		text-decoration: none;
 	}
-
+	
+	&__menu-item {
+		color: $base-red;
+		height: 10vh;
+		line-height: 10vh;
+		margin: 1px;
+		text-align: center;
+		font-size: 2.2em;
+		text-transform: uppercase;
+		font-family: 'Lato', sans-serif;
+		z-index: 2;
+		cursor: pointer;
+		
+		&:hover{
+			background-color: #af1515;
+			color: #fff;
+			transition: all 0.3s ease-in-out;
+		}
+	}
 }
-.header-container{
+
+.main-nav {
+	position: absolute;
+	display: none;
+	top: 80px;
+	left: 0px;
+	width: 100%;
+	opacity: 0;
+	list-style: none;	
+}
+.main-nav-opened{
+	opacity: 1;
+	display: block;
+}
+
+.header-container {
 	width: 80%;
 	height: 100%;
 	display: flex;

@@ -1,4 +1,5 @@
 .blog{
+	position: relative;
 	&__btn{
 		position: absolute;
 		width: 350px;
@@ -6,17 +7,38 @@
 		background-color: green;
 		z-index: 99;
 	}
-	&__btn--next{
-		right: -50px;
-		top: 150px;
-	}
-	&__btn--prev{
-		left: -50px;
-		top: 150px;
+
+}
+.blog-nav-container{
+	position: relative;
+}
+.blog-nav{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 99;
+	left: 0;
+	top: 35%;
+	
+	&__btn{
+		height: 100%;
+		font-size: 5em;
+		font-weight: 700;
+		color: #c1c1c1;
+		background-color: transparent;
+		border: none;
+		padding: 0 2vh;
+		cursor: pointer;
+		
+		&--next{
+			position: absolute;
+			right: 0px;
+			margin-right: 0px;
+		}
 	}
 }
 .blog-container{
-	width: 80%;
+	max-width: 70%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -42,12 +64,13 @@
 		margin: 30px 0;
 	}
 	&__author{
-		font-size: 1.5em;
+		font-size: 1.7em;
 		font-family: 'Lato', sans-serif;
 		margin-bottom: 20px;
 	}
 	&__text{
-		font-size: 1.7em;
+		font-size: 2em;
+		line-height: 1.4em;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: lighter;
 		padding: 20px 0;
@@ -56,9 +79,9 @@
 		color: #b6b6b6;
 	}
 	&__btn{
-		width: 170px;
-		height: 50px;
-		font-size: 1.7em;
+		width: 200px;
+		height: 60px;
+		font-size: 1.8em;
 		text-transform: uppercase;
 		border: 1px solid #000;
 		background-color: transparent;

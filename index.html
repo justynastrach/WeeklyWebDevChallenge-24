@@ -6,24 +6,26 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="src/css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:300,400" rel="stylesheet">
 </head>
 
 <body>
 	<header class="header">
 		<div class="header-container">
 			<a class="header__logo"><img src="img/logo.png"></a>
-			<button id="nav-icon" type="button" class="header__btn" aria-expanded="false" aria-label="Open/close menu" title="Open/close menu">
+		<button id="menu-icon" type="button" class="header__btn" aria-expanded="false" aria-label="Open/close menu" title="Open/close menu">
 			<span class="header__btn-span"></span>
 		</button>
+		<nav id="main-nav" class="main-nav">
 			<ul class="header__menu">
-				<li class="header__menu-item">Home</li>
-				<li class="header__menu-item">Shops</li>
-				<li class="header__menu-item">Brands</li>
-				<li class="header__menu-item">Blog</li>
-				<li class="header__menu-item">About</li>
-				<li class="header__menu-item">Contact</li>
+				<li class="header__menu-item"><a class="header__menu-link">Home</a></li>
+				<li class="header__menu-item"><a class="header__menu-link">Shops</a></li>
+				<li class="header__menu-item"><a class="header__menu-link">Brands</a></li>
+				<li class="header__menu-item"><a class="header__menu-link">Blog</a></li>
+				<li class="header__menu-item"><a class="header__menu-link">About</a></li>
+				<li class="header__menu-item"><a class="header__menu-link">Contact</a></li>
 			</ul>
+			</nav>
 		</div>
 	</header>
 
@@ -82,22 +84,27 @@
 
 			<fieldset class="items__sizes">
 				<legend>Choose size:</legend>
-				<label><input class="items__sizes-choice" type="radio" name="size" value="m"><abbr title="Medium">M</abbr></label>
-				<label><input class="items__sizes-choice" type="radio" name="size" value="l"><abbr title="Large">L</abbr></label>
-				<label><input class="items__sizes-choice" type="radio" name="size" value="xl"><abbr title="Extra Large">XL</abbr></label>
-				<label><input class="items__sizes-choice" type="radio" name="size" value="xxl"><abbr title="Extra Extra Large">XXL</abbr></label>
+				<label class="size-choice"><input type="radio" name="size" value="m"><abbr title="Medium">M</abbr></label>
+				<label class="size-choice"><input type="radio" name="size" value="l"><abbr title="Large">L</abbr></label>
+				<label class="size-choice"><input type="radio" name="size" value="xl"><abbr title="Extra Large">XL</abbr></label>
+				<label class="size-choice"><input type="radio" name="size" value="xxl"><abbr title="Extra Extra Large">XXL</abbr></label>
 				<button class="items__sizes-btn">shop now</button>
 				<button class="items__sizes-btn">size guide</button>
 			</fieldset>
-
 
 		</div>
 	</section>
 
 
 	<section class="blog">
-	<h2 class="section-title">From the Blog</h2>
+		<h2 class="section-title">From the Blog</h2>
 		<div class="container blog-container">
+			<nav class="blog-nav">
+				<div class="blog-nav-container">
+					<button id="btn_left" class="blog-nav__btn blog-nav__btn--prev">&#10094;</button>
+					<button id="btn_right" class="blog-nav__btn blog-nav__btn--next">&#10095;</button>
+				</div>
+			</nav>
 			<article id="article-block" class="article-block">
 				<img class="article-block__img" src="img/blog1.jpg">
 				<h3 class="article-block__name">GERMAN FASHION WIZARDS</h3>
@@ -112,31 +119,45 @@
 				<p class="article-block__author">By Marry Beard | Trending </p>
 				<p class="article-block__text">Just amazing! That is how i can describe this person. So creative,so inspiring. I was watching her create in her small studio in London and i was amazed at how every little detail gets included in her creaions. From frames,to glass thickness she blew me away... </p>
 				<button class="article-block__btn">read more</button>
-				
-				<button id="btn_right" class="blog__btn blog__btn--next">&#62;</button>
-			<button id="btn_left" class="blog__btn blog__btn--prev">&#60;</button>
 			</article>
-			
+
+			<article id="article-block" class="article-block">
+				<img class="article-block__img" src="img/blog1.jpg">
+				<h3 class="article-block__name">GERMAN FASHION WIZARDS</h3>
+				<p class="article-block__author">By James Steed | Fashion </p>
+				<p class="article-block__text">This week we had the chance of interviewing two creative artists from Germany. These guys are simply amazing at what they do with the European fashion scene and this year at Paris Fashion Week they introduced their new collection. </p>
+				<button class="article-block__btn">read more</button>
+			</article>
+
+			<article id="article-block" class="article-block">
+				<img class="article-block__img" src="img/blog2.jpg">
+				<h3 class="article-block__name">ANNE STEWART’S SUNGLASSES</h3>
+				<p class="article-block__author">By Marry Beard | Trending </p>
+				<p class="article-block__text">Just amazing! That is how i can describe this person. So creative,so inspiring. I was watching her create in her small studio in London and i was amazed at how every little detail gets included in her creaions. From frames,to glass thickness she blew me away... </p>
+				<button class="article-block__btn">read more</button>
+			</article>
+
 		</div>
 	</section>
 
 	<section class="subscribe">
+		<h2 class="subscribe__name">subscribe to our newsletter to receive latest news and offers</h2>
 		<div class="container subscribe-container">
-			<h2 class="subscribe__name">subscribe to our newsletter to receive latest news and offers</h2>
 			<form>
 				<div class="email-bar">
-					<img>
-					<label class="email-bar__name">email address</label><input class="email-bar__input" type="text" name="email">
+					<img src="img/subscribe_icon.png">
+					<label class="email-bar__name">email address:</label><input class="email-bar__input" type="text" name="email">
 				</div>
-				<button class="subscribe__btn">subscribe</button>
+
 			</form>
+			<button class="subscribe__btn">subscribe</button>
 		</div>
 	</section>
 
 	<footer class="footer">
-		<p class="footer__text">Made width<span></span>by WebDonut.net</p>
+		<p class="footer__text">Made with<img src="/img/footer_heart.png">by WebDonut.net</p>
 	</footer>
-<script src="src/js/script.js"></script>
+	<script src="src/js/script.js"></script>
 </body>
 
 </html>

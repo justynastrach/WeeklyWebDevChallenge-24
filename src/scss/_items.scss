@@ -1,8 +1,16 @@
+abbr{
+	text-decoration: none;
+	//background-color: blue;
+	position: absolute;
+	top: 50%;                         /* 3 */
+   transform: translate(-50%, -50%);
+	
+}
 .items-container{
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-gap: 20px;
-	width: 90%;
+	width: 85%;
 	margin: 0 auto;
 	//background-color: red;
 }
@@ -27,27 +35,29 @@
 		font-size: 2.8em;
 		font-family: 'Lato', sans-serif;
 		font-weight: 800;
-		text-align: center;
+		text-align: left;
 	}
 	&__subtitle{
 		grid-column: 1/7;
 		font-family: 'Open-Sans', sans-serif;
-		font-size: 1.8em;
+		font-size: 1.7em;
 		color: #777777;
 		letter-spacing: 1px;
-		text-align: center;
+		text-align: left;
 	}
 	&__text{
 		grid-column: 1/7;
-		font-size: 1.7em;
+		font-size: 2em;
+		line-height: 1.3em;
 		font-family: 'Lato', sans-serif;
 		letter-spacing: 1px;
 	}
 	&__tip{
 		grid-column: 1/7;
-		font-size: 1.7em;
+		font-size: 2em;
 		font-family: 'Lato', sans-serif;
 		letter-spacing: 1px;
+		line-height: 1.3em;
 	}
 	&__tip h4{
 		text-transform: uppercase;
@@ -59,29 +69,45 @@
 	}
 	
 	&__sizes legend{
-		font-size: 1.7em;
-		font-family: 'Lato', sans-serif;
-		letter-spacing: 1px;
+		opacity: 0;
 	}
-	&__sizes-choice{
-		width: 70px;
-		height: 50px;
+	&__sizes input{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		opacity: 0;
+		
+	}
+	&__sizes label{
 		display: inline-block;
-		border-radius: 0px;
-		background-color: red;
-		border: none;
-		background-color: transparent;
+		position: relative;
+		height: 55px;
+		width: 40%;
+		margin: 2%;
+		font-size: 1.8em;
+		font-weight: 700;
+		font-family: 'Lato', sans-serif;
+		border: 1px solid #333333;
+		color: #000;
+	
+		&:hover{
+			background-color: #333333;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			color: #fff;
+		}
 	}
 	
 	&__sizes-btn{
-		width: 170px;
-		height: 50px;
+		width: 85%;
+		height: 55px;
 		font-size: 1.7em;
 		text-transform: uppercase;
-		border: 1px solid #000;
+		border: 1px solid #333333;
 		background-color: transparent;
 		cursor: pointer;
-		
+		margin: 10px 0;
+		font-weight: 700;
 	}
 }
 

@@ -2,67 +2,71 @@
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/subscribe_bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: auto;
+	background-size: cover;
 	padding: 7vh 0;
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	text-align: center;
 
 	& form {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-
 	}
 
 	&__name {
 		padding: 0;
-		margin: 0;
-		font-size: 1.8em;
+		margin: 0 auto;
+		font-size: 2em;
 		text-transform: uppercase;
 		text-align: left;
 		font-family: 'Open Sans';
 		font-style: normal;
 		color: #fff;
 		letter-spacing: 0.5px;
-		margin-bottom:20px;
-		width: 100%;
+		margin-bottom:3vh;
+		width: 80%;
 	}
 
 	&__btn {
-		width: 25%;
-		height: 40px;
+		width: 40%;
+		height: 55px;
 		background-color: #fff;
 		color: #000;
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 700;
+		font-size: 1.7em;
 		border: none;
 		text-transform: uppercase;
+		margin-top: 3vh;
 	}
 }
 
 .subscribe-container {
 	padding: 0;
-	margin: 0;
-	width: 85%;
-
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .email-bar {
-	width: 70%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	border: 1px solid #fff;
-	padding: 5px 0;
+	padding: 10px;
 	&__name {
 		flex: 2;
-		font-size: 1.3em;
+		font-size: 1.4em;
 		text-transform: uppercase;
 		text-align: right;
-		
 		color: #fff;
 		font-family: 'Open Sans';
+
 	}
 	&__input {
 		flex: 5;

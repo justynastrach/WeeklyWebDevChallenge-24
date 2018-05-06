@@ -6,7 +6,7 @@
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	grid-gap: 20px;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	
 	& div{
@@ -15,7 +15,6 @@
 	}
 	
 }
-
 .section-title {
 	padding: 20px;
 	position: relative;
@@ -40,27 +39,30 @@
 	}
 }
 
-
 .img-small {
 	z-index: 1;
 	position: relative;
 	
-	&:hover{
+	&:hover::before {
 		cursor: pointer;
-		opacity: 1;
-		transition: all 0.4s ease-in-out;
+		opacity: 0;
+		z-index: -1;
 	}
-	&::after{
+	
+	&::before{
 		content: "";
 		position: absolute;
 		height: 80%;
 		width: 80%;
 		border: 2px solid #fff;
+		background: none;
 		z-index: 99;
 		top: 10%;
 		left: 10%;
+
 	}
 	
+
 	& img{
 		display: block;
 		margin: 0 auto;
