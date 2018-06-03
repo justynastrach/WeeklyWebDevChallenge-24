@@ -32,17 +32,29 @@
 		
 		&--next{
 			position: absolute;
-			right: 0px;
+			right: 50px;
 			margin-right: 0px;
+		}
+		
+		&--prev{
+			position: absolute;
+			margin-left: 0px;
+			left: 50px;
 		}
 	}
 }
 .blog-container{
-	max-width: 70%;
+	width: 70%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	
+
+	@media (min-width: $sm){
+		width: 60%;
+	}
+	@media (min-width: $md){
+		width: 40%;
+	}
 }
 
 .article-block{

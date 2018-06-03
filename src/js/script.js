@@ -1,3 +1,4 @@
+//SLIDER
 var box = document.getElementsByClassName('article-block');
 var btn_left = document.getElementById('btn_left');
 var btn_right = document.getElementById('btn_right');
@@ -41,27 +42,33 @@ if(btn_left){
 });
 }
 
-
+//MENU
 var menuBtn = document.getElementById('menu-icon');
+var mainNav = document.getElementById('main-nav');
 
 menuBtn.addEventListener("click", function(){
-	var mainNav = document.getElementById('main-nav');
-	mainNav.classList.toggle("main-nav-opened");
-})
-
-
-/*---clicking on some label with radiobutton---*/
-/*
-var sizeChoice = document.getElementsByClassName('size-choice');
-
-if(sizeChoice){
 	
-sizeChoice.addEventListener('click', function () {		
-
+	mainNav.classList.toggle('main-nav-opened');
 	
-for (var i=0; i < sizeChoice.length; i++) {
-    // Here we have the same onclick
-    sizeChoice.item(i).onclick.style.background = "red";
+	if(window.scrollY>0){
+		header.classList.toggle('scrolled-header');
+	}
+});
+
+
+
+//HEADER WHILE SCROLLING
+var header = document.getElementById('header');
+
+function scrolledNav(){
+	
+	if (window.scrollY == 0){
+		header.classList.remove('scrolled-header');
+	} else {
+		header.classList.add('scrolled-header');
+	}
 }
-}
-		*/				/*  )};*/
+
+window.addEventListener('scroll', scrolledNav);
+
+

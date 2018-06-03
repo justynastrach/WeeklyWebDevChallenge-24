@@ -12,7 +12,7 @@ h2{
 	font-family: 'Open Sans', sans-serif;
 	color: $h2-color;
 	font-style: italic;
-	font-size: 4em;
+	font-size: 3.5em;
 	text-align: center;
 	padding: 60px;
 
@@ -29,28 +29,45 @@ section{
 
 .home{
 	box-sizing: border-box;
-	background: url(/img/home1.jpeg);
+	background: url('../../img/home1.jpeg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
+	width: 100%;
 	color: #fff;
 	text-align: center;
-
 	
 	&__title{
 		font-family: 'Open Sans', sans-serif;
-		font-size: 2em;
+		font-size: 1.8em;
 		text-transform: uppercase;
 		letter-spacing: 3.5px;
+		
+		@media (min-width: $sm){
+			font-size: 2em;
+		}
+		@media (min-width: $md){
+			font-size: 2.2em;
+		}
+		@media (min-width: $md){
+			font-size: 2.4em;
+		}
 	}
 	&__subtitle{
 		font-family: 'Lato', sans-serif;
-		font-size: 4.8em;
+		font-size: 4.5em;
 		text-transform: uppercase;
 		font-weight: 900;
 		letter-spacing: 3px;
 		margin: 20px 0;
+		
+		@media(min-width: $sm){
+			font-size: 4.7em;
+		}
+		@media(min-width: $sm){
+			font-size: 5em;
+		}
 	}
 	&__btn{
 		width: 200px;
@@ -62,15 +79,31 @@ section{
 		font-size: 1.7em;
 		font-weight: 700;
 		cursor: pointer;
-		margin-top: 70px;
+		margin-top: 50px;
+		
+		@media(min-width: $sm){
+			font-size: 1.9em;
+			margin-top: 50px;
+		}
+		@media(min-width: $md){
+			width: 250px;
+			height: 90px;
+			font-size: 2em;
+		}
+
 	}
 }
 .home-container{
-	padding-top: 150px;
+	padding-top: 200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 
-	
+	@media(min-width: $sm){
+			padding-top: 250px;
+		}
+	@media (min-width: $lg){
+			padding-top: 300px;
+		}
 }
